@@ -20,7 +20,7 @@ const LibraryBar = () => {
       }
     );
     const json = await data.json();
-    console.log(json);
+
   };
   return (
     <div className=" bg-[#121212] text-gray-600 m-2 rounded-xl py-52">

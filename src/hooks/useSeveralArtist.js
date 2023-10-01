@@ -22,7 +22,7 @@ const useSeveralArtist = () =>{
       );
   
       const json = await data.json();
-      console.log(json)
+
         
       dispatch(addSeveralArtist(json))
         

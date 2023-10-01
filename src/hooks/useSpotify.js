@@ -1,7 +1,7 @@
 import React, { useEffect} from "react";
 import { client_id, client_secret } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { addAccessToken, addyo } from "../utils/spotifySlice";
+import { addAccessToken } from "../utils/spotifySlice";
 
 const useSpotify = () => {
 
@@ -21,7 +21,7 @@ const useSpotify = () => {
 
     if (data.ok) {
       const json = await data.json();
-      // console.log("Access Token:", json.access_token);
+
       dispatch(addAccessToken(json.access_token));
     } else {
       console.error("Error: HI", data?.status, data?.statusText);

@@ -2,19 +2,26 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import MusicList from "./MusicList";
 import useNewReleaseAlbum from "../hooks/useNewReleaseAlbums";
-import useSeveralArtist from "../hooks/useSeveralArtist";
+import useFeaturedPlaylist from "../hooks/useFeaturedPlaylist";
+import PlaylistList from "./PlaylistList";
+
 
 const Home = () => {
   useNewReleaseAlbum();
   // useSeveralArtist();
+  useFeaturedPlaylist()
 
   const albums = useSelector(store => store.spotify.newReleaseAlbums)
+  const featuredPlaylist = useSelector(store => store.playlist.featuredPlaylist)
 
-  if(!albums) return null
+  console.log(featuredPlaylist)
+  if(!albums && !featuredPlaylist) return null
 
   return (
-    <div className=" col-span-8 rounded-xl bg-[#121212] text-white">
-      <MusicList title={"New Released Albums"} musicAlbums={albums}/>
+    <div className="col-span-8 rounded-xl bg-[#121212] text-white">
+      <MusicList title={"New Released Albums"} musicAlbums={albums?.albums}/>
+
+      <PlaylistList title={featuredPlaylist.message} playlists= {featuredPlaylist.playlists} />
     </div>
   );
 };
