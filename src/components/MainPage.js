@@ -8,9 +8,10 @@ const MainPage = () => {
   useSpotify();
 
   return (
-    <div className="bg-black h-screen ">
+    <div className="bg-black h-full ">
       <Header />
-      <div className="grid grid-cols-12 mx-4 h-screen">
+      <div className="md:grid md:grid-cols-12 mx-4 h-screen flex flex-col">
+        
         <SideBar />
           <Outlet />
 

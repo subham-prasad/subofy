@@ -6,10 +6,10 @@ import Player from "./Player";
 
 
 const SideBar = () => {
-  return <div className="col-span-3 h-full ">
+  return <div className="col-span-3 h-full flex md:flex-col">
      
     <TopSideBar />
-    <LibraryBar />
+    {/* <LibraryBar /> */}
     <Player />
   </div>
 };

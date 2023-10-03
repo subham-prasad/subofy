@@ -7,6 +7,7 @@ import Album from "./Album";
 import ArtistPage from "./ArtistPage";
 import TrackPage from "./TrackPage";
 import PlaylistPage from "./PlaylistPage";
+import EpisodesPage from "./EpisodesPage";
 
 const Body = () => {
   // const navigate = useNavigate();
@@ -43,6 +44,10 @@ const Body = () => {
         {
           path: "/playlist/:playlistId",
           element: <PlaylistPage />,
+        },
+        {
+          path: "/playlist/:episodeId",
+          element: <EpisodesPage />,
         },
       ],
     },

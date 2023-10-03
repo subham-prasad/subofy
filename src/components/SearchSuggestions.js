@@ -37,7 +37,6 @@ const SearchSuggestions = () => {
       </div>
 
       {(activeButton === "All" || activeButton === "Albums") && <MusicList title={"Albums"} musicAlbums={albums} />}
-      {/* {activeButton === "Albums" && <AlbumTrackList albums={albums} />} */}
       {(activeButton === "All" || activeButton === "Playlists") && <PlaylistList title={"Playlists"} playlists={playlists} />}
       {(activeButton === "All" || activeButton === "Artists") && (
         <ArtistListBySearch title={"Artists"} artists={artists?.items} />

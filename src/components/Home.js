@@ -24,7 +24,7 @@ const Home = () => {
   if(!albums && !featuredPlaylist) return null
 
   return (
-    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-screen overflow-y-scroll " >
+    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-fill overflow-y-auto " >
      {/* <Header /> */}
      
       <MusicList title={"New Released Albums"} musicAlbums={albums?.albums}/>

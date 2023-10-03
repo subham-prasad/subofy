@@ -42,7 +42,7 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-black h-[10%] text-white flex justify-between p-4 mx-4">
+    <div className="bg-black text-white flex justify-between p-4 mx-4 h-16">
       
       <img
         className="w-1/10"

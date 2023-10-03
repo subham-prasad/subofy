@@ -17,7 +17,7 @@ const SearchBar = () => {
       if (searchText.trim() === "") {
         dispatch(clearSearchResults());
       } else if (!searchResults[searchText]) {
-        // Make the API call only if results for the searchText are not available.
+
         getSearchResults();
       }
     }, 1000);

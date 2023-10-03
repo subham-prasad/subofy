@@ -6,7 +6,7 @@ import store from './utils/store';
 
 function App() {
   return (
-    <div>
+    <div >
       <Provider store={store}>
       <Body />
       </Provider>
