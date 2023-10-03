@@ -9,7 +9,7 @@ const useTrackDetails = (trackId) => {
 
   useEffect(() => {
     accessToken && getTrackDetails();
-  }, [accessToken, trackId]);
+  }, [accessToken,trackId]);
 
   const getTrackDetails = async () => {
     const data = await fetch(

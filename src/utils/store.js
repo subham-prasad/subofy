@@ -4,6 +4,7 @@ import spotifySlice from "./spotifySlice";
 import artistSlice from "./artistSlice";
 import trackSlice from "./trackSlice";
 import playlistSlice from "./playlistSlice";
+import searchSlice from "./searchSlice";
 
 
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
     artist: artistSlice,
     track: trackSlice,
     playlist: playlistSlice,
+    search: searchSlice,
   },
 });
 

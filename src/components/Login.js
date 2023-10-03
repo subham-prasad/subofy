@@ -10,7 +10,7 @@ import Header from "./Header";
 const Login = () => {
   const [isSignInForm, setIsSignForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
-
+  const navigate = useNavigate();
 
 
 
@@ -38,6 +38,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          navigate("/")
 
         })
         .catch((error) => {
@@ -51,6 +52,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          navigate("/")
         })
         .catch((error) => {
           const errorCode = error.code;

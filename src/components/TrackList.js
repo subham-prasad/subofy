@@ -11,7 +11,7 @@ const TrackList = ({title , tracks}) => {
     {
     tracks.map((track)=>{
       return (
-        <TrackCard item = {track}  />
+        <TrackCard item = {track} key={track?.id} />
       )
     })}
   </div>;

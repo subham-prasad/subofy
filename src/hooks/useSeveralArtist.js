@@ -8,7 +8,7 @@ const useSeveralArtist = () =>{
     const dispatch = useDispatch()
     useEffect(() => {
       if(accessToken) getSeveralArtist();
-    }, [accessToken]);
+    }, [accessToken,]);
   
     const getSeveralArtist = async () => {
       const data = await fetch(

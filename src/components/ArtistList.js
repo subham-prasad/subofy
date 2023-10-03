@@ -16,8 +16,8 @@ const ArtistList = ({ title, artistId }) => {
   const {artists} = artistRelatedArtists
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="px-6 ">
+      <h1 className="text-3xl font-bold">{title}</h1>
       <div className="flex w-full overflow-x-scroll">
         {artists?.map((artist) => {
           return (

@@ -1,39 +1,43 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import useAlbumDetails from "../hooks/useAlbumDetails";
-import TrackCard from "./TrackCard";
+
 import AlbumHeader from "./AlbumHeader";
-import useAlbumTracks from "../hooks/useAlbumTracks";
-import AlbumTrackList from "./AlbumTracks";
+
+import AlbumTrackList from "./AlbumTracksList";
 import ArtistAlbumList from "./ArtistAlbumList";
+import { Play_IMG_CDN } from "../utils/constants";
+import { addSpotifyURI } from "../utils/spotifySlice";
 
 const Album = () => {
   const { id } = useParams();
 
-  const albumDetails = useSelector(store => store.spotify.albumDetails)
-  // console.log("Hi" + albumDetails.tracks.items);
+  const albumDetails = useSelector((store) => store.spotify.albumDetails);
+
+  const dispatch = useDispatch()
+ 
+
+  const setMusic = () => {
+    dispatch(addSpotifyURI(albumDetails.uri))
+  }
 
   return (
-    <div className="m-1 col-span-8 rounded-xl bg-[#121212] text-white p-10 overflow-y-scroll h-screen">
+    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-full overflow-y-scroll ">
       <AlbumHeader albumId={id} />
       <hr />
-      <div>
-        <button className="w-20">
-          <img
-            alt="Play"
-            src={
-              "https://jccdallas.org/wp-content/uploads/2020/06/Spotify-Play-Button.png"
-            }
-          />
+      <div className="">
+        <button onClick={setMusic} 
+        className="w-20 h-20 my-2 cursor-pointer">
+          <img className="cursor-pointer" alt="Play" src={Play_IMG_CDN} />
         </button>
       </div>
       <AlbumTrackList albumId={id} />
 
-      <ArtistAlbumList title={"More By" + albumDetails?.artists?.[0]?.name } artistId={albumDetails?.artists?.[0]?.id} />      
-      <div>
-        More By
-      </div>
+      <ArtistAlbumList
+        title={"More By" + albumDetails?.artists?.[0]?.name}
+        artistId={albumDetails?.artists?.[0]?.id}
+      />
+
     </div>
   );
 };

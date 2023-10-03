@@ -7,16 +7,10 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 
 const Header = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {})
-      .catch((error) => {
-        navigate("/error");
-      });
-  };
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -31,22 +25,32 @@ const Header = () => {
             photoURL: photoURL,
           })
         );
-        navigate("/");
+        // navigate("/");
       } else {
         dispatch(removeUser());
         navigate("/login");
       }
     });
   }, []);
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+
+      })
+      .catch((error) => {
+        navigate("/error");
+      });
+  };
   return (
-    <div className="bg-black h-[10%] text-white flex justify-between p-4">
+    <div className="bg-black h-[10%] text-white flex justify-between p-4 mx-4">
+      
       <img
-        className="w-[200px] "
+        className="w-1/10"
         alt="Logo"
         src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
       />
 
-      <button onClick={handleSignOut}>Sign Out</button>
+<button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 };

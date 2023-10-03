@@ -10,7 +10,7 @@ const useAlbumTracks = (id) => {
 
   useEffect(() => {
     accessToken && getAlbumTracks();
-  }, [accessToken, id]);
+  }, [ accessToken,id]);
 
   const getAlbumTracks = async () => {
     const data = await fetch(
@@ -24,7 +24,7 @@ const useAlbumTracks = (id) => {
     );
     const json = await data.json();
     dispatch(addAlbumTracks(json));
-    console.log(json);
+    // console.log(json);
   };
 };
 

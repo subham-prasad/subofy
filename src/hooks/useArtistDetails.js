@@ -24,7 +24,7 @@ const useArtistDetails = (artistId) => {
       });
       const json = await data.json();
       dispatch(addArtistDetails(json))
-      console.log(json)
+      // console.log(json)
     };
 }
 

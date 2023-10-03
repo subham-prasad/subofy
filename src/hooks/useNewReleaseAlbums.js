@@ -8,7 +8,7 @@ const useNEwReleaseAlbum = () =>{
     const dispatch = useDispatch()
     useEffect(() => {
       if(accessToken) getNewReleaseAlbum();
-    }, []);
+    }, [accessToken]);
   
     const getNewReleaseAlbum = async () => {
       const data = await fetch(

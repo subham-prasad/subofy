@@ -12,11 +12,10 @@ const PlaylistItems = ({ playlistId }) => {
 
   const {items} = playlistItems
 
-  // console.log(playlistItems)
   return <div>
-    {items?.map((item)=>{
+    {items?.map((item,index)=>{
       return (
-        <PlaylistItemsLong item={item} />
+        <PlaylistItemsLong item={item} key={item?.id} number={index + 1}/>
       )
     })}
   </div>;

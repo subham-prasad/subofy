@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const MusicList = ({ title, musicAlbums }) => {
 
+  if(!musicAlbums) return null
+
   return (
     <div className="m-3 p-4">
       <h1 className="font-bold text-2xl">{title}</h1>
@@ -16,7 +18,6 @@ const MusicList = ({ title, musicAlbums }) => {
               </Link>
             );
           })}
-        {/* <MusicCards album={musicAlbums?.albums.items[0]} /> */}
       </div>
     </div>
   );

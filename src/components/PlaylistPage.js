@@ -12,8 +12,10 @@ const PlaylistPage = () => {
 
    
   return (
-    <div className='m-1 col-span-8 rounded-xl bg-[#121212] text-white p-10 overflow-y-scroll h-screen'>
+    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-screen overflow-y-scroll ">
       <PlaylistHeader playlistId = {playlistId} />
+
+      
 
       <PlaylistItems playlistId = {playlistId} />
     </div>

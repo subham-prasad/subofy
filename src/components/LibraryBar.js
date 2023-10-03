@@ -23,7 +23,7 @@ const LibraryBar = () => {
 
   };
   return (
-    <div className=" bg-[#121212] text-gray-600 m-2 rounded-xl py-52">
+    <div className=" bg-[#121212] text-gray-600 m-2 rounded-xl py-10 h-1/5">
       <ul className="p-4 text-xl">
         <li className="hover:text-white ">📚 Library</li>
       </ul>

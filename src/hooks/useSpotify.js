@@ -24,13 +24,15 @@ const useSpotify = () => {
 
       dispatch(addAccessToken(json.access_token));
     } else {
-      console.error("Error: HI", data?.status, data?.statusText);
+      console.error("Error: ", data?.status, data?.statusText);
     }
   };
   
 
   useEffect(() => {
     !accessToken &&  getAccessToken();
-  }, []);
+  }, [accessToken]);
 };
 export default useSpotify;
+
+

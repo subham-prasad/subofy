@@ -9,7 +9,7 @@ const useFeaturedPlaylist = () => {
     
     useEffect(()=>{
         accessToken && getPlaylist()
-      },[])
+      },[accessToken,accessToken])
       const getPlaylist = async() =>{
 
         const data = await fetch("https://api.spotify.com/v1/browse/featured-playlists?country=IN", {

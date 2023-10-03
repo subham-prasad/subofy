@@ -14,8 +14,9 @@ const ArtistPage = () => {
   const { artistId } = useParams();
 
   return (
-    <div className="w-full col-span-8 rounded-xl bg-[#121212] text-white overflow-y-scroll p-10">
+    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-screen overflow-y-scroll ">
       <ArtistHeader artistId={artistId} />
+      
       <div>
         <ArtistAlbumList title={"Album"} artistId={artistId} />
       </div>
