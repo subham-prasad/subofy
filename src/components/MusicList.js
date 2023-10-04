@@ -9,7 +9,7 @@ const MusicList = ({ title, musicAlbums }) => {
   return (
     <div className="m-3 p-4">
       <h1 className="font-bold text-2xl">{title}</h1>
-      <div className="flex overflow-x-auto">
+      <div className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-thumb-rounded scrollbar-track-transparent">
         {musicAlbums &&
           musicAlbums?.items?.map((item) => {
             return (

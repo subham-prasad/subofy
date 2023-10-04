@@ -64,10 +64,10 @@ const Login = () => {
 
   return (
     <div className=" bg-[#18181b] w-full aspect-video absolute">
-      <Header />
+      {/* <Header /> */}
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="mx-auto w-5/12 text-white rounded-lg flex flex-col bg-black my-24 py-14 right-0 left-0"
+        className="mx-auto w-11/12 md:w-5/12 text-white rounded-lg flex flex-col bg-black my-24 py-14 right-0 left-0"
       >
         <h1 className="mx-auto  text-4xl font-bold my-4">
           {isSignInForm

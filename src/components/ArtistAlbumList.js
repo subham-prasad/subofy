@@ -12,7 +12,7 @@ const ArtistAlbumList = ({ title, artistId }) => {
   return (
     <div className="m-3 p-4">
       <h1 className="font-bold text-2xl">{title}</h1>
-      <div className="flex overflow-x-scroll">
+      <div className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-thumb-rounded scrollbar-track-transparent">
         {items?.map((item) => {
           return (
             <Link to={`/album/${item.id}`} key={item?.id}>

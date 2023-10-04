@@ -27,11 +27,11 @@ const TrackPage = () => {
   const { artists } = trackDetails;
 
   return (
-    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-screen overflow-y-scroll ">
+    <div >
       <TrackHeader trackDetails={trackDetails} />
       <div className="">
         <button onClick={setMusic} 
-        className="w-20 h-20 my-2 cursor-pointer">
+        className="w-20 h-20 md:my-2 cursor-pointer">
           <img className="cursor-pointer" alt="Play" src={Play_IMG_CDN} />
         </button>
       </div>

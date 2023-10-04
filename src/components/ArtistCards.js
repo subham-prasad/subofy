@@ -15,7 +15,7 @@ const ArtistCards = ({ artist }) => {
     
   }
   return (
-    <div className="m-4 p-4 bg-gray-800 w-56 mx-2 rounded-xl h-80 relative group">
+    <div className="m-4 p-4 bg-[#040406] hover:bg-[#3B3C36] w-36 mx-2 rounded-lg h-60 relative group">
       <img
         className=" aspect-square rounded-full"
         src={images?.[0]?.url}
@@ -26,7 +26,7 @@ const ArtistCards = ({ artist }) => {
           <img className="cursor-pointer" alt="Play" src={Play_IMG_CDN} />
         </button>
         <div className="py-8 px-2">
-      <h1 className="font-bold text-xl">{name}</h1>
+      <h1 className="font-bold text-xl line-clamp-1">{name}</h1>
       <h3>{type}</h3>
       </div>
     </div>

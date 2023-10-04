@@ -4,14 +4,12 @@ import MusicList from "./MusicList";
 import useNewReleaseAlbum from "../hooks/useNewReleaseAlbums";
 import useFeaturedPlaylist from "../hooks/useFeaturedPlaylist";
 import PlaylistList from "./PlaylistList";
-import Header from "./Header";
 
-import { useNavigate } from "react-router-dom";
-import { auth } from "../utils/firebase";
 
 
 const Home = () => {
-  const navigate = useNavigate();
+
+  const isMenuOpen = useSelector((store) => store.menu.isMenuOpen);
   
   useNewReleaseAlbum();
   // useSeveralArtist();
@@ -24,8 +22,8 @@ const Home = () => {
   if(!albums && !featuredPlaylist) return null
 
   return (
-    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-fill overflow-y-auto " >
-     {/* <Header /> */}
+    <div >
+
      
       <MusicList title={"New Released Albums"} musicAlbums={albums?.albums}/>
 

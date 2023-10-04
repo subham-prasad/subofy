@@ -22,7 +22,7 @@ const Album = () => {
   }
 
   return (
-    <div className="col-span-9 rounded-xl bg-[#121212] text-white h-full overflow-y-scroll ">
+    <div >
       <AlbumHeader albumId={id} />
       <hr />
       <div className="">

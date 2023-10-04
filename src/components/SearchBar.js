@@ -20,7 +20,7 @@ const SearchBar = () => {
 
         getSearchResults();
       }
-    }, 1000);
+    }, 100);
 
     return () => {
       clearTimeout(timer);

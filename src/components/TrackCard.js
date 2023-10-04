@@ -39,7 +39,6 @@ const TrackCard = ({ item, number }) => {
             onClick={setMusic}
             className="  opacity-100 transition-opacity"
           >
-            {/* <img className="cursor-pointer" alt="Play" src={Play_IMG_List_CDN} /> */}
             <FontAwesomeIcon icon={faPlay}  className="mr-2 pr-2 text-white" />
           </button>
         ) : (
@@ -51,10 +50,10 @@ const TrackCard = ({ item, number }) => {
 
             src={album?.images?.[0]?.url}
             alt="Poster"
-            className="w-10 mr-3"
+            className="w-10 mr-3 hidden md:block"
           />
         )}
-        <div>
+        <div className="line-clamp-2">
           <Link to={"/track/" + id} key={id} className="hover:underline">
             {name}
           </Link>

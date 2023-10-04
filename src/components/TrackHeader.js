@@ -5,11 +5,11 @@ const TrackHeader = ({trackDetails}) => {
 
     const {album,artists, name } = trackDetails
   return (
-    <div className="flex mt-6 rounded-lg mx-2 h-80 bg-slate-600 pt-4">
-        <img className="w-72 h-72 px-4 " src={album?.images?.[0]?.url} alt="Poster" />
-        <div className="my-auto">
+    <div className="flex w-full bg-slate-600 p-4">
+        <img className="w-1/3 h-1/3 " src={album?.images?.[0]?.url} alt="Poster" />
+        <div className="my-auto h-2/3 w-2/3 px-2">
           <p>{album?.type}</p>
-          <h1 className="font-extrabold text-5xl">{name }</h1>
+          <h1 className="font-extrabold md:text-5xl">{name }</h1>
 
           <div className="flex p-2">
             <Link to={"/artist/"+album?.artists?.[0]?.id}><p>{album?.artists?.[0]?.name} • </p></Link>

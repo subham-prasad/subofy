@@ -15,7 +15,7 @@ const PlaylistCards = ({item}) => {
     }
   return (
     <div>
-<div className="m-4 p-4 bg-gray-800 w-56 mx-2 rounded-xl h-80 relative group">
+<div className="m-4 p-4 bg-[#040406] hover:bg-[#3B3C36] w-36 mx-2 rounded-lg h-60 relative group">
       <img className="w-30" src={images?.[0].url} alt="Album" />
       <button onClick={setMusic} 
         className=" w-20 h-20 my-2 absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">

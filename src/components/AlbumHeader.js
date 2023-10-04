@@ -12,12 +12,12 @@ const AlbumHeader = ({ albumId }) => {
 
   const { images, name, type, artists, release_date } = albumDetails;
   return (
-    <div className="flex h-80 bg-slate-600 p-4">
-      <img className="w-72 h-72 px-4" src={images?.[0]?.url} alt="Poster" />
-      <div className="my-auto">
+    <div className="flex w-full  p-4">
+      <img className="w-1/3 h-1/3" src={images?.[0]?.url} alt="Poster" />
+      <div className="my-auto h-2/3 w-2/3 px-2">
         <p>{type}</p>
-        <h1 className="font-extrabold text-5xl">{name}</h1>
-        <div className="flex p-2 ">
+        <h1 className="font-extrabold md:text-5xl ">{name}</h1>
+        <div className="flex px-2 ">
           {artists?.map((artist) => {
             return (
               <Link to={"/artist/" + artist?.id} key={artist?.id} className="hover:underline" >

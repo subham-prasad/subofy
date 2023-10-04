@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 
+
 const Header = () => {
 
   const dispatch = useDispatch();
@@ -32,15 +33,7 @@ const Header = () => {
       }
     });
   }, []);
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-
-      })
-      .catch((error) => {
-        navigate("/error");
-      });
-  };
+  
   return (
     <div className="bg-black text-white flex justify-between p-4 mx-4 h-16">
       
@@ -50,7 +43,6 @@ const Header = () => {
         src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
       />
 
-<button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 };

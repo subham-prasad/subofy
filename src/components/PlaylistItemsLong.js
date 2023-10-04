@@ -26,7 +26,7 @@ const PlaylistItemsLong = ({ item, number }) => {
 
 
   return (
-    <div className="width-full h-20 rounded-lg my-3 hover:bg-[#454545] px-2  items-center grid grid-cols-12"
+    <div className="width-full h-20 rounded-lg my-3 hover:bg-[#454545] px-2  items-center grid grid-cols-12 "
     onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}>
       <div className="px-5 flex items-center col-span-6">
@@ -43,12 +43,12 @@ const PlaylistItemsLong = ({ item, number }) => {
         )}
         <div>
           <img
-            className="h-10 mt-1"
+            className="h-10 mt-1 hidden md:block"
             src={album?.images?.[0]?.url}
             alt="Poster"
           />
         </div>
-        <div className="px-2">
+        <div className="px-2 line-clamp-1">
           <Link
             to={"/track/" + track.id}
             key={track.id}
@@ -56,7 +56,7 @@ const PlaylistItemsLong = ({ item, number }) => {
           >
             {name}
           </Link>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap ">
             {artists &&
               artists?.map((artist) => {
                 return (
@@ -72,7 +72,7 @@ const PlaylistItemsLong = ({ item, number }) => {
           </div>
         </div>
       </div>
-      <div className="flex-grow col-span-4">
+      <div className="flex-grow col-span-4 line-clamp-1">
         <Link
           to={"/album/" + album?.id}
           key={album?.id}
@@ -83,7 +83,7 @@ const PlaylistItemsLong = ({ item, number }) => {
       </div>
       <div></div>
 
-      <div className="px-2 whitespace-nowrap text-white col-span-1">
+      <div className="px-1 whitespace-nowrap text-white col-span-1">
         {FormatDuration(duration_ms)}
       </div>
     </div>

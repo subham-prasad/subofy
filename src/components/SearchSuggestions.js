@@ -22,13 +22,13 @@ const SearchSuggestions = () => {
 
   return (
     <div >
-      <div className="mx-5 px-4 text-lg" >
+      <div className="mx-1 md:mx-5 px-2 md:px-4 text-lg" >
       {buttonList.map((item, index) => (
           <button
             key={index}
             className={`mr-2 ${
               activeButton === item ? "bg-white text-[#1e1e1e]" : "bg-[#1e1e1e] text-white"
-            } rounded-2xl px-3 py-1`}
+            } rounded-2xl px-3 py-1 my-1`}
             onClick={() => setActiveButton(item)}
           >
             {item}

@@ -16,8 +16,8 @@ const ArtistTrackList = ({ title, artistId }) => {
 
   return (
     <div className="m-3 p-4">
-      <h1 className="font-bold text-2xl">{title}</h1>
-      {tracks.map((track) => {
+      <h1 className="font-bold text-xl  md:text-2xl">{title}</h1>
+      { tracks && tracks.map((track) => {
         return <TrackCard item={track} key={track?.id} />;
       })}
     </div>

@@ -11,14 +11,14 @@ const ArtistHeader = ({artistId}) => {
 
     
   return (
-    <div className="flex">
+    <div className="flex w-full p-4">
         <img
-          className="w-auto h-64 object-cover "
+          className="w-1/3 h-1/3 "
           alt="Artist"
           src={images?.[0]?.url}
         />
-        <div className=" px-3 py-10">
-          <h1 className="text-8xl font-bold">{name}</h1>
+        <div className=" my-auto h-2/3 w-2/3 px-2">
+          <h1 className=" text-2xl md:text-5xl font-bold">{name}</h1>
           <h3 className="text-lg font-medium">
             {"Total Followers: " + followers?.total}
           </h3>
